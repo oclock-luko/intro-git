@@ -1,5 +1,7 @@
+//Récupération du paquet NPM express
 const express = require('express');
 
+//Initialisation de l'app
 const app = express();
 
 app.get('/', (req, res) => {
@@ -17,6 +19,7 @@ app.get('/goodbye/:name', (req, res) => {
     res.end();
 });
 
+//Lancement du serveur
 app.listen(3000, _ => {
     console.log(`App listening on http://localhost:3000`);
 });
