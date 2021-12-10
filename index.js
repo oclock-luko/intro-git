@@ -8,7 +8,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/hello/:name', (req, res) => {
-    res.write(`Hello, ${req.params.name}`);
+    res.write(`Bonjour, ${req.params.name}`);
     res.end();
 });
 
