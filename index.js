@@ -3,7 +3,7 @@ const express = require('express');
 const app = express();
 
 app.get('/', (req, res) => {
-    res.write('Hello, GIT !');
+    res.write('=== Hello, GIT ! ===');
     res.end();
 });
 
@@ -12,8 +12,8 @@ app.get('/hello/:name', (req, res) => {
     res.end();
 });
 
-app.get('/goodbye', (req, res) => {
-    res.write('Goodbye');
+app.get('/goodbye/:name', (req, res) => {
+    res.write(`Goodbye, ${req.params.name}`);
     res.end();
 });
 
